@@ -26,6 +26,12 @@ defmodule ExAws.Config.Defaults do
     %{service_override: :dynamodb}
     |> Map.merge(defaults(:dynamodb))
   end
+  
+  def defaults(:service_idp) do
+    %{service_override: :"service-idp"}
+    |> Map.merge(defaults(:"service-idp"))
+  end
+  
 
   def defaults(:lex_runtime) do
     %{service_override: :lex}

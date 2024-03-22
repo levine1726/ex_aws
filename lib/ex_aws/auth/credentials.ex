@@ -9,6 +9,7 @@ defmodule ExAws.Auth.Credentials do
   end
 
   def generate_credential_scope_v4(service, config, datetime) do
+    #service = if service == "cognito_idp", do: "cognito-idp", else: service
     "#{date(datetime)}/#{config[:region]}/#{service}/aws4_request"
   end
 end
